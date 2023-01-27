@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "kireji-telegram-bot"
+version = "0.1.0"
+description = "simple telegram bot, that detects valid haiku messages and replies to them"
+authors = ["walkingpendulum <oayunin@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiogram = "^3.0.0b6"
+python-dotenv = {extras = ["cli"], version = "^0.21.1"}
+
+[tool.poetry.group.dev.dependencies]
+aiogram-tests = "^1.0.3"
+ipdb = "^0.13.11"
+pytest = "^7.2.1"
+mypy = "^0.991"
+black = "^22.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.mypy.overrides]]
+module = "ipdb.*"
+ignore_missing_imports = true
