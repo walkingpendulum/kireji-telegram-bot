@@ -32,10 +32,6 @@ async def echo_handler(message: types.Message) -> None:
 
     By default, message handler will handle all message types (like text, photo, sticker and etc.)
     """
-    import ipdb
-
-    ipdb.set_trace()
-    # noqa   # type: ignore
     try:
         # Send copy of the received message
         await message.send_copy(chat_id=message.chat.id)
